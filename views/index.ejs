@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2> LIVE AQI </h2>
+
+            
+            <form id="feedbackForm" action="/submit" method="POST">
+
+                <label for="phone">Country Name:</label>
+                <input type="text" id="phone" name="countName" required>
+
+                <label for="sName">State Name</label>
+                <input type="text" id="fullName" name="sName" required>
+
+                <label for="cName">City Name</label>
+                <input type="text" id="email" name="cName" required>
+
+
+
+                <button type="submit">Check AQI</button>
+            </form>
+
+            <% if (locals.aqi) { %>
+                <h2> AQI :<%= aqi %></h2>
+            <% } %>
+           
+        </div>
+    </div>
+
+    
+</body>
+</html>
